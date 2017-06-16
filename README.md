@@ -39,7 +39,8 @@ In `config.js`, add a `storage` block for each environment.
             accessKeyId: 'Put_your_access_key_here',
             secretAccessKey: 'Put_your_secret_key_here',
             bucket: 'Put_your_bucket_name_here',
-            region: 'Put_your_bucket_region_here'
+            region: 'Put_your_bucket_region_here',
+            rootFolder: "Optional root folder"
         }
     },
 ```
@@ -57,7 +58,8 @@ CloudFlare, or others. The modified `storage` block would be:
             secretAccessKey: 'SECRET_ACCESS_KEY',
             bucket: 'S3_BUCKET_NAME',
             region: 'S3_REGION',
-            assetHost: 'https://cdn.yourdomain.com/'
+            assetHost: 'https://cdn.yourdomain.com/',
+            rootFolder: "assets"
         }
     }
 ```
