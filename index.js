@@ -82,6 +82,9 @@ S3Store.prototype.save = function save(image) {
                 ContentType: image.type,
                 CacheControl: 'max-age=' + (1000 * 365 * 24 * 60 * 60) // 365 days
             };
+        if(options.debug){
+            console.log(params)
+        }
 
             return s3.putObject(params).promise();
         })
