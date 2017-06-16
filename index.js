@@ -77,7 +77,7 @@ S3Store.prototype.save = function save(image) {
             var params = {
                 ACL: 'public-read',
                 Bucket: options.bucket,
-                Key: targetFilename,
+                Key: options.rootFolder ? options.rootFolder + targetFilename : targetFilename,
                 Body: buffer,
                 ContentType: image.type,
                 CacheControl: 'max-age=' + (1000 * 365 * 24 * 60 * 60) // 365 days
